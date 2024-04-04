@@ -10,8 +10,9 @@ import { CheckboxModule } from 'primeng/checkbox';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  isDisabledCheckbox: boolean = true;
   readonly native = new FormControl({ value: false, disabled: true });
-  readonly primeng = new FormControl({ value: false, disabled: true });
+  readonly primeng = new FormControl({ value: false, disabled: this.isDisabledCheckbox });
   readonly form = this.formBuilder.group({
     native: this.native,
     primeng: this.primeng,

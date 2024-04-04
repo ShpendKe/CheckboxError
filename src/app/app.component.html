@@ -1,4 +1,4 @@
 <form [formGroup]="form">
   <input type="checkbox" [formControl]="native" id="native" />
-  <p-checkbox [formControl]="primeng" inputId="primeng" />
+  <p-checkbox [formControl]="primeng" [disabled]="isDisabledCheckbox" inputId="primeng" />
 </form>
